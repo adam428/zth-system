@@ -10,7 +10,7 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class ZthSystemApplication {
 
-    @RequestMapping("/")
+    @RequestMapping("/zenith")
     @ResponseBody
     String home() {
         return "Hello World!";
