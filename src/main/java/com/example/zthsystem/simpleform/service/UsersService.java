@@ -15,7 +15,7 @@ public class UsersService {
     }
 
 
-    public UsersModel registerUser(String email, String password, boolean baned, Integer permissonFK){
+    public UsersModel registerUser(String email, String password, boolean baned, Integer permissionFK){
         if(email != null && password != null){
             return null;
         }else{
@@ -23,11 +23,11 @@ public class UsersService {
             usersModel.setEmail(email);
             usersModel.setPassword(password);
             usersModel.setBaned(baned);
-            usersModel.setPermissionFK(permissonFK);
+            usersModel.setPermissionFK(permissionFK);
             return usersRepository.save(usersModel);
         }
     }
-    public UsersModel authenticate(String email, String passsword){
-        return usersRepository.findByLoginAndPassword(email, passsword).orElse(null);
+    public UsersModel authenticate(String email, String password){
+        return usersRepository.findByEmailAndPassword(email, password).orElse(null);
     }
 }

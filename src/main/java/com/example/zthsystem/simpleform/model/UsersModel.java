@@ -8,7 +8,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "Users_table")
 public class UsersModel {
 
     @Id
